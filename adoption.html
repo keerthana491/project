@@ -177,36 +177,6 @@ footer {
         </option>
 
     </select>
-
-
-    <label>Home Type:</label>
-
-    <select id="home" name="home">
-
-        <option value="">-- Select Home Type --</option>
-
-        <option value="Apartment">
-            Apartment
-        </option>
-
-        <option value="Independent House">
-            Independent House
-        </option>
-
-        <option value="Farm House">
-            Farm House
-        </option>
-
-    </select>
-
-
-    <label>Reason for Adoption:</label>
-
-    <textarea id="reason"
-              name="reason"
-              placeholder="Why do you want to adopt?"></textarea>
-
-
     <button type="submit">
         ❤️ Submit Application
     </button>
@@ -216,7 +186,7 @@ footer {
 
 <footer>
 
-    🐾 Happy Paws Pet Adoption | © 2026
+        Thank you for comming
 
 </footer>
 
@@ -235,10 +205,6 @@ function validateForm() {
 
     let pet = document.getElementById("pet").value;
 
-    let home = document.getElementById("home").value;
-
-    let reason = document.getElementById("reason").value.trim();
-
 
     if (name == "") {
         alert("Please enter your name");
@@ -246,7 +212,7 @@ function validateForm() {
     }
 
 
-    if (age < 18) {
+    if (age < = 18&& age >=50) {
         alert("Adopter must be 18 years or above");
         return false;
     }
@@ -269,20 +235,6 @@ function validateForm() {
         return false;
     }
 
-
-    if (home == "") {
-        alert("Please select your home type");
-        return false;
-    }
-
-
-    if (reason == "") {
-        alert("Please enter your reason for adoption");
-        return false;
-    }
-
-
-    return true;
 
 }
 
