@@ -1,0 +1,169 @@
+# Happy Paws – Home Page
+
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Happy Paws - Pet Adoption</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff5ee;
+    text-align: center;
+}
+
+header {
+    background: #ff7043;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 10px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+.hero {
+    padding: 50px 20px;
+}
+
+.hero h1 {
+    color: #e64a19;
+    font-size: 40px;
+}
+
+.hero p {
+    font-size: 18px;
+}
+
+button {
+    background: #ff7043;
+    color: white;
+    border: none;
+    padding: 12px 22px;
+    margin: 10px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #d84315;
+}
+
+.cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.card {
+    background: white;
+    width: 200px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #ccc;
+}
+
+.card h2 {
+    color: #e64a19;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+    margin-top: 40px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h2>🐾 Happy Paws</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pets.html">Pets</a>
+        <a href="details.html">Details</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="summary.html">Summary</a>
+        <a href="payment.html">Payment</a>
+    </nav>
+
+</header>
+
+
+<div class="hero">
+
+    <h1>🐶 Find Your New Best Friend ❤️</h1>
+
+    <p>
+        Give a loving pet a happy home.
+    </p>
+
+    <button onclick="viewPets()">
+        🐾 View Available Pets
+    </button>
+
+    <button onclick="adoptNow()">
+        ❤️ Adopt Now
+    </button>
+
+</div>
+
+
+<h2>Why Adopt a Pet?</h2>
+
+<div class="cards">
+
+    <div class="card">
+        <h2>❤️ Love</h2>
+        <p>Pets bring happiness and love to your family.</p>
+    </div>
+
+    <div class="card">
+        <h2>🏠 Home</h2>
+        <p>Give a homeless pet a safe and caring home.</p>
+    </div>
+
+    <div class="card">
+        <h2>🐾 Care</h2>
+        <p>Provide pets with love, food and proper care.</p>
+    </div>
+
+</div>
+
+
+<footer>
+    🐾 Happy Paws Pet Adoption | © 2026
+</footer>
+
+
+<script>
+
+function viewPets() {
+    window.location.href = "pets.html";
+}
+
+function adoptNow() {
+    window.location.href = "adoption.html";
+}
+
+</script>
+
+</body>
+</html>
+```
