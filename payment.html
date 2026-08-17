@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Payment - Happy Paws</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    background: #f3e5f5;
+    text-align: center;
+}
+
+.box {
+    width: 400px;
+    margin: 50px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px gray;
+}
+
+h1 {
+    color: #7b1fa2;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    box-sizing: border-box;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #7b1fa2;
+    color: white;
+    border: none;
+    border-radius: 20px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="box">
+
+<h1>💳 Happy Paws Payment</h1>
+
+<h3>🐾 Adoption Fee: ₹2500</h3>
+
+<form action="payment.php" method="POST"
+      onsubmit="return validate()">
+
+<input type="text" id="name"
+       name="name"
+       placeholder="Enter your name">
+
+<select id="pet" name="pet">
+
+<option value="">Select Pet</option>
+
+<option>Bruno - Labrador</option>
+<option>Max - Beagle</option>
+<option>Luna - Persian Cat</option>
+<option>Bella - Siamese Cat</option>
+
+</select>
+
+<select id="method" name="method">
+
+<option value="">Select Payment Method</option>
+
+<option>UPI</option>
+<option>Google Pay</option>
+<option>PhonePe</option>
+<option>Paytm</option>
+<option>Debit Card</option>
+<option>Credit Card</option>
+<option>Net Banking</option>
+
+</select>
+
+<input type="text"
+       name="details"
+       placeholder="UPI ID / Card Number">
+
+<button type="submit">
+🔐 Pay ₹2500 & Get OTP
+</button>
+
+</form>
+
+</div>
+
+<script>
+
+function validate() {
+
+let name = document.getElementById("name").value;
+let pet = document.getElementById("pet").value;
+let method = document.getElementById("method").value;
+
+if (name == "" || pet == "" || method == "") {
+
+alert("Please fill all details");
+
+return false;
+
+}
+
+return true;
+
+}
+
+</script>
+
+</body>
+</html>
