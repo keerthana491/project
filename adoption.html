@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<title>Pet Adoption - Happy Paws</title>
+
+<style>
+
+body {
+    font-family: Arial;
+    background: #eef7f5;
+    margin: 0;
+}
+
+header {
+    background: #00897b;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+form {
+    width: 420px;
+    margin: 35px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 4px 12px gray;
+}
+
+h1 {
+    text-align: center;
+    color: #00897b;
+}
+
+label {
+    font-weight: bold;
+}
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0 15px;
+    box-sizing: border-box;
+    border: 1px solid #aaa;
+    border-radius: 8px;
+}
+
+textarea {
+    height: 70px;
+}
+
+button {
+    width: 100%;
+    padding: 12px;
+    background: #00897b;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #00695c;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <h2>🐾 Happy Paws</h2>
+
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="pets.html">Pets</a>
+        <a href="details.html">Details</a>
+        <a href="adoption.html">Adopt</a>
+        <a href="summary.php">Summary</a>
+        <a href="payment.html">Payment</a>
+    </nav>
+
+</header>
+
+
+<form action="adoption.php"
+      method="POST"
+      onsubmit="return validateForm()">
+
+    <h1>🐾 Adoption Form</h1>
+
+    <label>Name:</label>
+
+    <input type="text"
+           id="name"
+           name="name"
+           placeholder="Enter your name">
+
+
+    <label>Age:</label>
+
+    <input type="number"
+           id="age"
+           name="age"
+           placeholder="Enter your age"
+           min="18">
+
+
+    <label>Email:</label>
+
+    <input type="email"
+           id="email"
+           name="email"
+           placeholder="Enter your email">
+
+
+    <label>Phone:</label>
+
+    <input type="text"
+           id="phone"
+           name="phone"
+           placeholder="Enter 10 digit phone number"
+           maxlength="10">
+
+
+    <!-- Address added -->
+
+    <label>Address:</label>
+
+    <input type="text"
+           id="address"
+           name="address"
+           placeholder="Enter your address">
+
+
+    <label>Select Pet:</label>
+
+    <select id="pet" name="pet">
+
+        <option value="">-- Select Pet --</option>
+
+        <option value="Bruno - Labrador">
+            Bruno - Labrador
+        </option>
+
+        <option value="Max - Beagle">
+            Max - Beagle
+        </option>
+
+        <option value="Luna - Persian Cat">
+            Luna - Persian Cat
+        </option>
+
+        <option value="Bella - Siamese Cat">
+            Bella - Siamese Cat
+        </option>
+
+    </select>
+
+
+    <label>Home Type:</label>
+
+    <select id="home" name="home">
+
+        <option value="">-- Select Home Type --</option>
+
+        <option value="Apartment">
+            Apartment
+        </option>
+
+        <option value="Independent House">
+            Independent House
+        </option>
+
+        <option value="Farm House">
+            Farm House
+        </option>
+
+    </select>
+
+
+    <label>Reason for Adoption:</label>
+
+    <textarea id="reason"
+              name="reason"
+              placeholder="Why do you want to adopt?"></textarea>
+
+
+    <button type="submit">
+        ❤️ Submit Application
+    </button>
+
+</form>
+
+
+<footer>
+
+    🐾 Happy Paws Pet Adoption | © 2026
+
+</footer>
+
+
+<script>
+
+function validateForm() {
+
+    let name = document.getElementById("name").value.trim();
+
+    let age = document.getElementById("age").value;
+
+    let phone = document.getElementById("phone").value.trim();
+
+    let address = document.getElementById("address").value.trim();
+
+    let pet = document.getElementById("pet").value;
+
+    let home = document.getElementById("home").value;
+
+    let reason = document.getElementById("reason").value.trim();
+
+
+    if (name == "") {
+        alert("Please enter your name");
+        return false;
+    }
+
+
+    if (age < 18) {
+        alert("Adopter must be 18 years or above");
+        return false;
+    }
+
+
+    if (phone.length != 10 || isNaN(phone)) {
+        alert("Please enter a valid 10 digit phone number");
+        return false;
+    }
+
+
+    if (address == "") {
+        alert("Please enter your address");
+        return false;
+    }
+
+
+    if (pet == "") {
+        alert("Please select a pet");
+        return false;
+    }
+
+
+    if (home == "") {
+        alert("Please select your home type");
+        return false;
+    }
+
+
+    if (reason == "") {
+        alert("Please enter your reason for adoption");
+        return false;
+    }
+
+
+    return true;
+
+}
+
+</script>
+
+</body>
+</html>
+
+
+
+       
+            
+
+        
+
+        
+
+       
