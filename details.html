@@ -1,0 +1,194 @@
+
+
+    
+
+
+
+        <!DOCTYPE html>
+<html>
+<head>
+
+<title>Pet Details</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #fff3e0;
+}
+
+header {
+    background: #ef6c00;
+    color: white;
+    text-align: center;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+.profile {
+    width: 650px;
+    margin: 40px auto;
+    background: white;
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px #bbb;
+    display: flex;
+    gap: 30px;
+}
+
+.pet {
+    width: 230px;
+    background: #ffe0b2;
+    border-radius: 15px;
+    text-align: center;
+    padding: 30px 10px;
+}
+
+.pet span {
+    font-size: 100px;
+}
+
+.info {
+    flex: 1;
+}
+
+.info h1 {
+    color: #e65100;
+}
+
+.info p {
+    padding: 7px;
+    border-bottom: 1px solid #ddd;
+}
+
+button {
+    background: #ef6c00;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: 50px;
+}
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<h2>🐾 Happy Paws</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="pets.html">Pets</a>
+<a href="details.html">Details</a>
+<a href="adoption.html">Adopt</a>
+<a href="summary.php">Summary</a>
+<a href="payment.html">Payment</a>
+</nav>
+
+</header>
+
+
+<div class="profile">
+
+<div class="pet">
+<span id="petIcon">🐶</span>
+<h2 id="petName">Bruno</h2>
+<p id="breed">Labrador</p>
+</div>
+
+
+<div class="info">
+
+<h1>🐾 Pet Profile</h1>
+
+<p><b>Age:</b> <span id="age">2 Years</span></p>
+
+<p><b>Gender:</b> <span id="gender">Male</span></p>
+
+<p><b>Color:</b> <span id="color">Golden</span></p>
+
+<p><b>Vaccinated:</b> Yes 🩺</p>
+
+<p><b>Health:</b> Healthy 💚</p>
+
+<p><b>Personality:</b> Friendly & Playful</p>
+
+<p><b>Status:</b> Available</p>
+
+<button onclick="adopt()">
+❤️ Adopt This Pet
+</button>
+
+</div>
+
+</div>
+
+
+<footer>
+🐾 Happy Paws Pet Adoption | © 2026
+</footer>
+
+
+<script>
+
+let pet = new URLSearchParams(window.location.search)
+          .get("pet");
+
+if (pet == "Max") {
+
+    document.getElementById("petIcon").innerText = "🐕";
+    document.getElementById("petName").innerText = "Max";
+    document.getElementById("breed").innerText = "Beagle";
+    document.getElementById("age").innerText = "3 Years";
+    document.getElementById("gender").innerText = "Male";
+    document.getElementById("color").innerText = "Brown";
+
+}
+
+else if (pet == "Luna") {
+
+    document.getElementById("petIcon").innerText = "🐱";
+    document.getElementById("petName").innerText = "Luna";
+    document.getElementById("breed").innerText = "Persian Cat";
+    document.getElementById("age").innerText = "1 Year";
+    document.getElementById("gender").innerText = "Female";
+    document.getElementById("color").innerText = "White";
+
+}
+
+else if (pet == "Bella") {
+
+    document.getElementById("petIcon").innerText = "🐈";
+    document.getElementById("petName").innerText = "Bella";
+    document.getElementById("breed").innerText = "Siamese Cat";
+    document.getElementById("age").innerText = "2 Years";
+    document.getElementById("gender").innerText = "Female";
+    document.getElementById("color").innerText = "Cream";
+
+}
+
+
+function adopt() {
+    window.location.href = "adoption.html";
+}
+
+</script>
+
+</body>
+</html>
