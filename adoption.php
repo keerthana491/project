@@ -132,9 +132,6 @@ Thank you for choosing to adopt a pet!
 <?php echo htmlspecialchars($address); ?>
 <br>
 
-<b>💗 Reason:</b>
-<?php echo htmlspecialchars($reason); ?>
-
 </div>
 
 
@@ -144,11 +141,6 @@ We will contact you soon. 🐾
 
 
 <div class="buttons">
-
-<button onclick="location.href='summary.php'">
-    📋 Summary
-</button>
-
 <button onclick="location.href='payment.html'">
     💳 Payment
 </button>
