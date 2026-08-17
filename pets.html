@@ -1,0 +1,183 @@
+
+
+
+
+    
+
+
+
+    
+
+        <!DOCTYPE html>
+<html>
+<head>
+<title>Available Pets</title>
+
+<style>
+body {
+    font-family: Arial;
+    margin: 0;
+    background: #eef7f5;
+    text-align: center;
+}
+
+header {
+    background: #00897b;
+    color: white;
+    padding: 15px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 8px;
+}
+
+h1 {
+    color: #00695c;
+    margin: 30px;
+}
+
+input {
+    padding: 10px;
+    width: 250px;
+    border-radius: 20px;
+    border: 2px solid #00897b;
+}
+
+.pets {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin: 30px;
+}
+
+.card {
+    background: white;
+    width: 180px;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px #bbb;
+}
+
+.photo {
+    font-size: 60px;
+    background: #d9f2ef;
+    padding: 15px;
+    border-radius: 12px;
+}
+
+.card h2 {
+    color: #00897b;
+}
+
+button {
+    background: #00897b;
+    color: white;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+footer {
+    background: #333;
+    color: white;
+    padding: 15px;
+}
+</style>
+</head>
+
+<body>
+
+<header>
+<h2>🐾 Happy Paws</h2>
+
+<nav>
+<a href="index.html">Home</a>
+<a href="pets.html">Pets</a>
+<a href="details.html">Details</a>
+<a href="adoption.html">Adopt</a>
+<a href="summary.php">Summary</a>
+<a href="payment.html">Payment</a>
+</nav>
+</header>
+
+<h1>🐶 Available Pets</h1>
+
+<input type="text" id="search"
+placeholder="🔍 Search pet"
+onkeyup="searchPet()">
+
+<div class="pets">
+
+<div class="card">
+<div class="photo">🐶</div>
+<h2>Bruno</h2>
+<p>Labrador<br>2 Years | Male</p>
+<button onclick="viewDetails('Bruno')">
+View Details
+</button>
+</div>
+
+<div class="card">
+<div class="photo">🐕</div>
+<h2>Max</h2>
+<p>Beagle<br>3 Years | Male</p>
+<button onclick="viewDetails('Max')">
+View Details
+</button>
+</div>
+
+<div class="card">
+<div class="photo">🐱</div>
+<h2>Luna</h2>
+<p>Persian Cat<br>1 Year | Female</p>
+<button onclick="viewDetails('Luna')">
+View Details
+</button>
+</div>
+
+<div class="card">
+<div class="photo">🐈</div>
+<h2>Bella</h2>
+<p>Siamese Cat<br>2 Years | Female</p>
+<button onclick="viewDetails('Bella')">
+View Details
+</button>
+</div>
+
+</div>
+
+<footer>
+🐾 Happy Paws Pet Adoption | © 2026
+</footer>
+
+<script>
+
+function viewDetails(pet) {
+    window.location.href = "details.html?pet=" + pet;
+}
+
+function searchPet() {
+
+    let text = document.getElementById("search").value.toLowerCase();
+    let cards = document.getElementsByClassName("card");
+
+    for (let i = 0; i < cards.length; i++) {
+
+        let name = cards[i].getElementsByTagName("h2")[0]
+                     .innerText.toLowerCase();
+
+        if (name.includes(text))
+            cards[i].style.display = "block";
+        else
+            cards[i].style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>
